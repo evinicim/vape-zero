@@ -1,0 +1,1 @@
+{ "name": "VAPE ZERO", "short_name": "VAPE ZERO", "start_url": "/aluno", "display": "standalone", "background_color": "#f7fbfb", "theme_color": "#4f9d8e", "lang": "pt-BR", "icons": [{ "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" }] }

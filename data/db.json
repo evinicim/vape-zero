@@ -1,0 +1,1963 @@
+{
+  "organizations": [
+    {
+      "id": "org-demo",
+      "name": "Escola Estadual Demonstração",
+      "kind": "escola"
+    }
+  ],
+  "classes": [
+    {
+      "id": "cls-8a",
+      "orgId": "org-demo",
+      "name": "8º ano A",
+      "joinCode": "8A2026"
+    },
+    {
+      "id": "cls-9b",
+      "orgId": "org-demo",
+      "name": "9º ano B",
+      "joinCode": "9B2026"
+    },
+    {
+      "id": "cls-1em",
+      "orgId": "org-demo",
+      "name": "1º EM",
+      "joinCode": "1EM2026"
+    },
+    {
+      "id": "cls-pequena",
+      "orgId": "org-demo",
+      "name": "Turma piloto (pequena)",
+      "joinCode": "PILOTO"
+    }
+  ],
+  "members": [
+    {
+      "id": "m-aluno",
+      "email": "aluno@demo.com",
+      "name": "Aluno Demo",
+      "passwordHash": "3c3cd86571f48adfd2cf02b6ca5a9d09:5eece59b8cdad983eeb526dd6d7be906fe247b2cc9838b4ef751d0e65038916e",
+      "role": "student",
+      "orgId": "org-demo",
+      "classId": "cls-8a",
+      "createdAt": "2026-10-27T12:33:01.890Z"
+    },
+    {
+      "id": "m-gestor",
+      "email": "gestor@demo.com",
+      "name": "Gestora Demo",
+      "passwordHash": "b07e829acadb7fa2950cf8ca803f0500:c032f76c209c3f4fbc0077159150fcb121c479f4a51b19e8a3c7d4f58401af3b",
+      "role": "educator",
+      "orgId": "org-demo",
+      "createdAt": "2026-10-27T12:33:01.890Z"
+    },
+    {
+      "id": "m-admin",
+      "email": "admin@demo.com",
+      "name": "Admin Demo",
+      "passwordHash": "a21bde0f5e502750ad575b7729747e5c:6f43c1ea9ae8c64226631b9c581e3a892ee4c9d94710a0407bb13b8c5e2cc799",
+      "role": "admin",
+      "orgId": "org-demo",
+      "createdAt": "2026-10-27T12:33:01.890Z"
+    }
+  ],
+  "situations": [
+    {
+      "id": "sit-pressao",
+      "slug": "pressao-social",
+      "title": "Pressão social",
+      "category": "pressao",
+      "illustration": "grupo",
+      "published": true,
+      "summary": "Seus amigos oferecem um vape numa festa. E agora?",
+      "body": "É sábado à noite e você está com a sua turma. Alguém tira um vape do bolso, dá uma tragada e passa pra você: \"Relaxa, é só sabor de fruta, não faz nada\". Todo mundo olha. Você sente aquele frio na barriga de não querer parecer careta.\n\nVale saber: a maioria dos vapes tem nicotina — muitas vezes em quantidade alta — mesmo quando o cheiro é doce. A nicotina age rápido no cérebro adolescente, que ainda está em formação, e pode gerar dependência.",
+      "question": "O que você faz?",
+      "choices": [
+        {
+          "id": "c-p1",
+          "label": "Recuso com uma frase curta: \"Não, valeu\" e mudo de assunto.",
+          "trail": "prevencao",
+          "nextStep": "confianca",
+          "feedback": "Boa! Uma recusa simples e segura funciona muito bem. Você não precisa se justificar. Amigos de verdade respeitam um \"não\"."
+        },
+        {
+          "id": "c-p2",
+          "label": "Aceito só uma vez para não ficar de fora.",
+          "trail": "prevencao",
+          "nextStep": "confianca",
+          "feedback": "Entendemos — a vontade de pertencer é real. Mas \"só uma vez\" é como muita dependência começa. Da próxima, experimente ter uma frase pronta ou um plano de saída (ex.: \"vou pegar água\")."
+        },
+        {
+          "id": "c-p3",
+          "label": "Saio de perto e chamo alguém de confiança.",
+          "trail": "prevencao",
+          "nextStep": "confianca",
+          "feedback": "Ótima escolha. Afastar-se da situação e buscar apoio mostra autocuidado. Conversar com alguém de confiança ajuda a se preparar para as próximas vezes."
+        }
+      ]
+    },
+    {
+      "id": "sit-curiosidade",
+      "slug": "curiosidade",
+      "title": "Curiosidade",
+      "category": "curiosidade",
+      "illustration": "duvida",
+      "published": true,
+      "summary": "Você viu vídeos sobre vape e ficou curioso(a).",
+      "body": "Nas redes, aparece gente fazendo nuvens de fumaça e truques. Parece inofensivo e até divertido. Você fica pensando: \"Será que é tão ruim assim?\"\n\nFatos: no Brasil, a venda de cigarros eletrônicos é proibida pela Anvisa. Os líquidos podem conter nicotina, metais e substâncias que irritam os pulmões. Conteúdo nas redes muitas vezes é publicidade disfarçada.",
+      "question": "Qual é o seu próximo passo?",
+      "choices": [
+        {
+          "id": "c-c1",
+          "label": "Procuro informação em fontes confiáveis (Ministério da Saúde, INCA).",
+          "trail": "prevencao",
+          "nextStep": "confianca",
+          "feedback": "Excelente! Curiosidade é ótima quando vem com boas fontes. Você está tomando uma decisão informada."
+        },
+        {
+          "id": "c-c2",
+          "label": "Experimento para ver como é.",
+          "trail": "prevencao",
+          "nextStep": "ubs",
+          "feedback": "A curiosidade é natural, mas experimentar expõe você à nicotina e a outros riscos. Se tiver dúvidas sobre saúde, a UBS mais próxima pode conversar com você sem julgamento."
+        },
+        {
+          "id": "c-c3",
+          "label": "Pergunto para um adulto de confiança o que ele sabe.",
+          "trail": "prevencao",
+          "nextStep": "confianca",
+          "feedback": "Boa ideia. Conversar abre espaço para tirar dúvidas e pensar junto, sem pressão."
+        }
+      ]
+    },
+    {
+      "id": "sit-parar",
+      "slug": "dificuldade-para-parar",
+      "title": "Dificuldade para parar",
+      "category": "parar",
+      "illustration": "caminho",
+      "published": true,
+      "summary": "Você já usa e está difícil parar.",
+      "body": "Você começou \"só de vez em quando\", mas agora sente vontade várias vezes ao dia. Já tentou parar e ficou irritado(a), ansioso(a) ou com dificuldade de concentração.\n\nIsso não é fraqueza: são sinais comuns de dependência de nicotina. A boa notícia é que dá para parar, e você não precisa fazer isso sozinho(a). O SUS oferece apoio gratuito.",
+      "question": "O que você gostaria de fazer agora?",
+      "choices": [
+        {
+          "id": "c-s1",
+          "label": "Quero conversar com alguém de confiança sobre isso.",
+          "trail": "apoio",
+          "nextStep": "confianca",
+          "feedback": "Esse é um passo corajoso. Contar para alguém de confiança deixa o caminho mais leve. Você pode começar com: \"Preciso de ajuda com uma coisa\"."
+        },
+        {
+          "id": "c-s2",
+          "label": "Quero saber onde buscar ajuda profissional.",
+          "trail": "apoio",
+          "nextStep": "ubs",
+          "feedback": "Ótimo. A UBS (Unidade Básica de Saúde) oferece acompanhamento gratuito para quem quer parar com a nicotina. Você também pode ligar no Disque Saúde 136."
+        },
+        {
+          "id": "c-s3",
+          "label": "Ainda não sei se quero parar.",
+          "trail": "apoio",
+          "nextStep": "disque136",
+          "feedback": "Tudo bem não ter certeza. Que tal observar quando a vontade aparece? Informação ajuda a decidir. O Disque Saúde 136 tira dúvidas de forma gratuita e sigilosa."
+        }
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "id": "r-fake-cls-8a-0-sit-pressao",
+      "memberId": "fake-cls-8a-0",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-28T18:04:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-0-sit-curiosidade",
+      "memberId": "fake-cls-8a-0",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-05T21:24:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-0-sit-parar",
+      "memberId": "fake-cls-8a-0",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-06T10:23:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-1-sit-pressao",
+      "memberId": "fake-cls-8a-1",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T21:03:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-1-sit-curiosidade",
+      "memberId": "fake-cls-8a-1",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-27T17:22:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-1-sit-parar",
+      "memberId": "fake-cls-8a-1",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-23T11:21:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-2-sit-pressao",
+      "memberId": "fake-cls-8a-2",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T15:01:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-2-sit-curiosidade",
+      "memberId": "fake-cls-8a-2",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-12T16:20:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-2-sit-parar",
+      "memberId": "fake-cls-8a-2",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-11T03:20:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-3-sit-pressao",
+      "memberId": "fake-cls-8a-3",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-05T11:59:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-3-sit-parar",
+      "memberId": "fake-cls-8a-3",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-22T05:23:24.112Z"
+    },
+    {
+      "id": "r-fake-cls-8a-4-sit-pressao",
+      "memberId": "fake-cls-8a-4",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T07:16:10.778Z"
+    },
+    {
+      "id": "r-fake-cls-8a-4-sit-curiosidade",
+      "memberId": "fake-cls-8a-4",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-26T14:48:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-8a-4-sit-parar",
+      "memberId": "fake-cls-8a-4",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-07T16:01:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-8a-5-sit-pressao",
+      "memberId": "fake-cls-8a-5",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-07T22:54:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-8a-6-sit-pressao",
+      "memberId": "fake-cls-8a-6",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-01T07:15:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-6-sit-curiosidade",
+      "memberId": "fake-cls-8a-6",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T21:15:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-6-sit-parar",
+      "memberId": "fake-cls-8a-6",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-17T20:54:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-7-sit-pressao",
+      "memberId": "fake-cls-8a-7",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-03T18:14:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-7-sit-curiosidade",
+      "memberId": "fake-cls-8a-7",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-28T01:13:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-7-sit-parar",
+      "memberId": "fake-cls-8a-7",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-18T05:53:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-8-sit-pressao",
+      "memberId": "fake-cls-8a-8",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T20:12:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-8-sit-curiosidade",
+      "memberId": "fake-cls-8a-8",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-26T08:11:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-8-sit-parar",
+      "memberId": "fake-cls-8a-8",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-19T05:51:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-9-sit-pressao",
+      "memberId": "fake-cls-8a-9",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-18T01:10:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-9-sit-curiosidade",
+      "memberId": "fake-cls-8a-9",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T06:10:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-10-sit-curiosidade",
+      "memberId": "fake-cls-8a-10",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T00:42:39.667Z"
+    },
+    {
+      "id": "r-fake-cls-8a-10-sit-parar",
+      "memberId": "fake-cls-8a-10",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-13T15:28:46.334Z"
+    },
+    {
+      "id": "r-fake-cls-8a-11-sit-pressao",
+      "memberId": "fake-cls-8a-11",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-25T19:54:53.001Z"
+    },
+    {
+      "id": "r-fake-cls-8a-11-sit-parar",
+      "memberId": "fake-cls-8a-11",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-04T20:07:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-13-sit-pressao",
+      "memberId": "fake-cls-8a-13",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T23:46:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-13-sit-curiosidade",
+      "memberId": "fake-cls-8a-13",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T10:05:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-13-sit-parar",
+      "memberId": "fake-cls-8a-13",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-10T18:05:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-14-sit-pressao",
+      "memberId": "fake-cls-8a-14",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-29T11:44:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-14-sit-curiosidade",
+      "memberId": "fake-cls-8a-14",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-24T03:04:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-14-sit-parar",
+      "memberId": "fake-cls-8a-14",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-12T04:03:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-15-sit-pressao",
+      "memberId": "fake-cls-8a-15",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-11T02:43:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-15-sit-curiosidade",
+      "memberId": "fake-cls-8a-15",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-08T11:02:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-15-sit-parar",
+      "memberId": "fake-cls-8a-15",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-21T17:01:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-16-sit-pressao",
+      "memberId": "fake-cls-8a-16",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-08T08:41:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-16-sit-curiosidade",
+      "memberId": "fake-cls-8a-16",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-15T22:00:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-16-sit-parar",
+      "memberId": "fake-cls-8a-16",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-01T21:00:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-17-sit-pressao",
+      "memberId": "fake-cls-8a-17",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-13T17:39:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-17-sit-curiosidade",
+      "memberId": "fake-cls-8a-17",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-08T23:59:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-18-sit-pressao",
+      "memberId": "fake-cls-8a-18",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-06T08:56:10.778Z"
+    },
+    {
+      "id": "r-fake-cls-8a-18-sit-curiosidade",
+      "memberId": "fake-cls-8a-18",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-03T04:28:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-8a-19-sit-pressao",
+      "memberId": "fake-cls-8a-19",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-09T02:37:06.334Z"
+    },
+    {
+      "id": "r-fake-cls-8a-19-sit-parar",
+      "memberId": "fake-cls-8a-19",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-18T20:36:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-20-sit-pressao",
+      "memberId": "fake-cls-8a-20",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-12T00:55:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-20-sit-curiosidade",
+      "memberId": "fake-cls-8a-20",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T02:55:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-20-sit-parar",
+      "memberId": "fake-cls-8a-20",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-03T14:34:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-21-sit-pressao",
+      "memberId": "fake-cls-8a-21",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-06T23:54:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-21-sit-curiosidade",
+      "memberId": "fake-cls-8a-21",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-18T18:53:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-21-sit-parar",
+      "memberId": "fake-cls-8a-21",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-26T11:33:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-22-sit-curiosidade",
+      "memberId": "fake-cls-8a-22",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-14T07:36:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-8a-22-sit-parar",
+      "memberId": "fake-cls-8a-22",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-02T17:29:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-8a-23-sit-curiosidade",
+      "memberId": "fake-cls-8a-23",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-18T00:04:19.667Z"
+    },
+    {
+      "id": "r-fake-cls-8a-23-sit-parar",
+      "memberId": "fake-cls-8a-23",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-22T09:50:26.334Z"
+    },
+    {
+      "id": "r-fake-cls-8a-24-sit-pressao",
+      "memberId": "fake-cls-8a-24",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T21:16:33.001Z"
+    },
+    {
+      "id": "r-fake-cls-8a-24-sit-curiosidade",
+      "memberId": "fake-cls-8a-24",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-03T22:22:39.667Z"
+    },
+    {
+      "id": "r-fake-cls-8a-25-sit-pressao",
+      "memberId": "fake-cls-8a-25",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-30T12:48:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-25-sit-curiosidade",
+      "memberId": "fake-cls-8a-25",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-08T20:28:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-25-sit-parar",
+      "memberId": "fake-cls-8a-25",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-08T01:47:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-26-sit-pressao",
+      "memberId": "fake-cls-8a-26",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-15T16:46:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-26-sit-curiosidade",
+      "memberId": "fake-cls-8a-26",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T05:26:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-26-sit-parar",
+      "memberId": "fake-cls-8a-26",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-06T03:45:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-8a-27-sit-pressao",
+      "memberId": "fake-cls-8a-27",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-23T23:45:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-8a-27-sit-curiosidade",
+      "memberId": "fake-cls-8a-27",
+      "classId": "cls-8a",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-30T05:24:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-8a-27-sit-parar",
+      "memberId": "fake-cls-8a-27",
+      "classId": "cls-8a",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-12T08:44:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-0-sit-pressao",
+      "memberId": "fake-cls-9b-0",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T21:43:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-0-sit-parar",
+      "memberId": "fake-cls-9b-0",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-03T10:13:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-1-sit-pressao",
+      "memberId": "fake-cls-9b-1",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-03T20:26:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-1-sit-parar",
+      "memberId": "fake-cls-9b-1",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-12T08:48:13.001Z"
+    },
+    {
+      "id": "r-fake-cls-9b-2-sit-parar",
+      "memberId": "fake-cls-9b-2",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-25T13:05:04.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-3-sit-pressao",
+      "memberId": "fake-cls-9b-3",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-09-27T21:57:50.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-3-sit-curiosidade",
+      "memberId": "fake-cls-9b-3",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T00:30:37.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-3-sit-parar",
+      "memberId": "fake-cls-9b-3",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-25T08:43:24.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-4-sit-pressao",
+      "memberId": "fake-cls-9b-4",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-25T10:36:10.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-4-sit-curiosidade",
+      "memberId": "fake-cls-9b-4",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-09T18:08:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-4-sit-parar",
+      "memberId": "fake-cls-9b-4",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-25T19:21:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-5-sit-pressao",
+      "memberId": "fake-cls-9b-5",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-01T02:14:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-5-sit-parar",
+      "memberId": "fake-cls-9b-5",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-03T20:49:19.667Z"
+    },
+    {
+      "id": "r-fake-cls-9b-6-sit-curiosidade",
+      "memberId": "fake-cls-9b-6",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T08:35:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-6-sit-parar",
+      "memberId": "fake-cls-9b-6",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-19T08:14:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-7-sit-parar",
+      "memberId": "fake-cls-9b-7",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-24T09:53:46.334Z"
+    },
+    {
+      "id": "r-fake-cls-9b-8-sit-pressao",
+      "memberId": "fake-cls-9b-8",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-03T11:19:53.001Z"
+    },
+    {
+      "id": "r-fake-cls-9b-8-sit-curiosidade",
+      "memberId": "fake-cls-9b-8",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T02:25:59.667Z"
+    },
+    {
+      "id": "r-fake-cls-9b-8-sit-parar",
+      "memberId": "fake-cls-9b-8",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-01T19:12:06.334Z"
+    },
+    {
+      "id": "r-fake-cls-9b-10-sit-curiosidade",
+      "memberId": "fake-cls-9b-10",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-24T12:30:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-10-sit-parar",
+      "memberId": "fake-cls-9b-10",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-21T17:30:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-11-sit-pressao",
+      "memberId": "fake-cls-9b-11",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-09-29T20:09:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-11-sit-curiosidade",
+      "memberId": "fake-cls-9b-11",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-06T08:29:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-11-sit-parar",
+      "memberId": "fake-cls-9b-11",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-09-28T18:28:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-12-sit-pressao",
+      "memberId": "fake-cls-9b-12",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-24T14:08:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-12-sit-curiosidade",
+      "memberId": "fake-cls-9b-12",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-11T07:27:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-12-sit-parar",
+      "memberId": "fake-cls-9b-12",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-06T10:26:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-13-sit-curiosidade",
+      "memberId": "fake-cls-9b-13",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-01T09:37:17.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-13-sit-parar",
+      "memberId": "fake-cls-9b-13",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-16T09:50:04.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-14-sit-pressao",
+      "memberId": "fake-cls-9b-14",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-28T03:42:50.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-14-sit-curiosidade",
+      "memberId": "fake-cls-9b-14",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-24T03:15:37.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-14-sit-parar",
+      "memberId": "fake-cls-9b-14",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-21T20:28:24.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-15-sit-parar",
+      "memberId": "fake-cls-9b-15",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-09-27T14:03:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-16-sit-pressao",
+      "memberId": "fake-cls-9b-16",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-29T22:22:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-16-sit-parar",
+      "memberId": "fake-cls-9b-16",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-20T01:59:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-17-sit-pressao",
+      "memberId": "fake-cls-9b-17",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-18T23:32:17.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-17-sit-curiosidade",
+      "memberId": "fake-cls-9b-17",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-04T14:45:04.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-17-sit-parar",
+      "memberId": "fake-cls-9b-17",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-24T11:37:50.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-18-sit-curiosidade",
+      "memberId": "fake-cls-9b-18",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-30T00:52:39.667Z"
+    },
+    {
+      "id": "r-fake-cls-9b-18-sit-parar",
+      "memberId": "fake-cls-9b-18",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-23T09:38:46.334Z"
+    },
+    {
+      "id": "r-fake-cls-9b-19-sit-pressao",
+      "memberId": "fake-cls-9b-19",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T08:04:53.001Z"
+    },
+    {
+      "id": "r-fake-cls-9b-19-sit-parar",
+      "memberId": "fake-cls-9b-19",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-16T16:17:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-20-sit-pressao",
+      "memberId": "fake-cls-9b-20",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-05T13:16:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-20-sit-curiosidade",
+      "memberId": "fake-cls-9b-20",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-05T07:56:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-20-sit-parar",
+      "memberId": "fake-cls-9b-20",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-03T12:15:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-21-sit-pressao",
+      "memberId": "fake-cls-9b-21",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T14:15:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-21-sit-curiosidade",
+      "memberId": "fake-cls-9b-21",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-05T01:54:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-21-sit-parar",
+      "memberId": "fake-cls-9b-21",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-13T11:14:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-22-sit-pressao",
+      "memberId": "fake-cls-9b-22",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-09-30T06:13:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-22-sit-curiosidade",
+      "memberId": "fake-cls-9b-22",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-12T22:53:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-23-sit-pressao",
+      "memberId": "fake-cls-9b-23",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T10:56:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-23-sit-curiosidade",
+      "memberId": "fake-cls-9b-23",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T20:49:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-23-sit-parar",
+      "memberId": "fake-cls-9b-23",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-18T12:22:17.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-24-sit-pressao",
+      "memberId": "fake-cls-9b-24",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-27T21:35:04.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-24-sit-curiosidade",
+      "memberId": "fake-cls-9b-24",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-26T12:27:50.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-24-sit-parar",
+      "memberId": "fake-cls-9b-24",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-01T21:00:37.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-25-sit-pressao",
+      "memberId": "fake-cls-9b-25",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-01T11:13:24.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-26-sit-pressao",
+      "memberId": "fake-cls-9b-26",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T07:48:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-26-sit-parar",
+      "memberId": "fake-cls-9b-26",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-20T15:51:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-27-sit-pressao",
+      "memberId": "fake-cls-9b-27",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T04:44:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-9b-27-sit-curiosidade",
+      "memberId": "fake-cls-9b-27",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-15T11:17:17.445Z"
+    },
+    {
+      "id": "r-fake-cls-9b-27-sit-parar",
+      "memberId": "fake-cls-9b-27",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-17T23:30:04.112Z"
+    },
+    {
+      "id": "r-fake-cls-9b-28-sit-parar",
+      "memberId": "fake-cls-9b-28",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-01T16:44:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-9b-29-sit-pressao",
+      "memberId": "fake-cls-9b-29",
+      "classId": "cls-9b",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-18T20:04:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-9b-29-sit-curiosidade",
+      "memberId": "fake-cls-9b-29",
+      "classId": "cls-9b",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-29T09:03:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-9b-30-sit-parar",
+      "memberId": "fake-cls-9b-30",
+      "classId": "cls-9b",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-10T16:02:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-0-sit-pressao",
+      "memberId": "fake-cls-1em-0",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-16T10:01:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-1-sit-curiosidade",
+      "memberId": "fake-cls-1em-1",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-25T15:00:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-1-sit-parar",
+      "memberId": "fake-cls-1em-1",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-04T02:00:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-2-sit-curiosidade",
+      "memberId": "fake-cls-1em-2",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-20T03:50:37.445Z"
+    },
+    {
+      "id": "r-fake-cls-1em-2-sit-parar",
+      "memberId": "fake-cls-1em-2",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-09-28T12:03:24.112Z"
+    },
+    {
+      "id": "r-fake-cls-1em-3-sit-pressao",
+      "memberId": "fake-cls-1em-3",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-03T13:56:10.778Z"
+    },
+    {
+      "id": "r-fake-cls-1em-4-sit-curiosidade",
+      "memberId": "fake-cls-1em-4",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-13T22:41:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-1em-4-sit-parar",
+      "memberId": "fake-cls-1em-4",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-24T05:34:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-1em-5-sit-pressao",
+      "memberId": "fake-cls-1em-5",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-11T06:07:17.445Z"
+    },
+    {
+      "id": "r-fake-cls-1em-5-sit-curiosidade",
+      "memberId": "fake-cls-1em-5",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T12:20:04.112Z"
+    },
+    {
+      "id": "r-fake-cls-1em-6-sit-pressao",
+      "memberId": "fake-cls-1em-6",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-28T19:21:33.001Z"
+    },
+    {
+      "id": "r-fake-cls-1em-6-sit-parar",
+      "memberId": "fake-cls-1em-6",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-16T16:54:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-7-sit-pressao",
+      "memberId": "fake-cls-1em-7",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-20T23:53:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-7-sit-curiosidade",
+      "memberId": "fake-cls-1em-7",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T04:33:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-7-sit-parar",
+      "memberId": "fake-cls-1em-7",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-04T18:52:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-8-sit-pressao",
+      "memberId": "fake-cls-1em-8",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T06:51:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-8-sit-curiosidade",
+      "memberId": "fake-cls-1em-8",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T04:31:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-9-sit-curiosidade",
+      "memberId": "fake-cls-1em-9",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-22T02:50:26.334Z"
+    },
+    {
+      "id": "r-fake-cls-1em-9-sit-parar",
+      "memberId": "fake-cls-1em-9",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-14T02:16:33.001Z"
+    },
+    {
+      "id": "r-fake-cls-1em-10-sit-pressao",
+      "memberId": "fake-cls-1em-10",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-18T15:22:39.667Z"
+    },
+    {
+      "id": "r-fake-cls-1em-10-sit-curiosidade",
+      "memberId": "fake-cls-1em-10",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-23T06:08:46.334Z"
+    },
+    {
+      "id": "r-fake-cls-1em-11-sit-pressao",
+      "memberId": "fake-cls-1em-11",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-26T01:28:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-11-sit-curiosidade",
+      "memberId": "fake-cls-1em-11",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T18:47:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-11-sit-parar",
+      "memberId": "fake-cls-1em-11",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-17T21:46:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-12-sit-pressao",
+      "memberId": "fake-cls-1em-12",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-13T22:26:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-12-sit-curiosidade",
+      "memberId": "fake-cls-1em-12",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-23T08:45:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-12-sit-parar",
+      "memberId": "fake-cls-1em-12",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-03T16:45:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-13-sit-pressao",
+      "memberId": "fake-cls-1em-13",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-02T10:24:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-13-sit-curiosidade",
+      "memberId": "fake-cls-1em-13",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-07T01:44:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-13-sit-parar",
+      "memberId": "fake-cls-1em-13",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-05T02:43:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-14-sit-pressao",
+      "memberId": "fake-cls-1em-14",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-14T01:23:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-14-sit-curiosidade",
+      "memberId": "fake-cls-1em-14",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T09:42:28.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-15-sit-pressao",
+      "memberId": "fake-cls-1em-15",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-09-28T05:19:30.778Z"
+    },
+    {
+      "id": "r-fake-cls-1em-15-sit-curiosidade",
+      "memberId": "fake-cls-1em-15",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-02T02:52:17.445Z"
+    },
+    {
+      "id": "r-fake-cls-1em-16-sit-pressao",
+      "memberId": "fake-cls-1em-16",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-09-30T19:40:26.334Z"
+    },
+    {
+      "id": "r-fake-cls-1em-16-sit-parar",
+      "memberId": "fake-cls-1em-16",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-16T16:19:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-17-sit-pressao",
+      "memberId": "fake-cls-1em-17",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T22:39:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-17-sit-curiosidade",
+      "memberId": "fake-cls-1em-17",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-09-28T02:38:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-18-sit-pressao",
+      "memberId": "fake-cls-1em-18",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-09-29T11:08:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-1em-19-sit-pressao",
+      "memberId": "fake-cls-1em-19",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-17T00:36:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-19-sit-curiosidade",
+      "memberId": "fake-cls-1em-19",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-21T19:16:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-19-sit-parar",
+      "memberId": "fake-cls-1em-19",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-24T23:35:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-20-sit-pressao",
+      "memberId": "fake-cls-1em-20",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-14T01:35:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-1em-20-sit-curiosidade",
+      "memberId": "fake-cls-1em-20",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-06T13:14:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-1em-20-sit-parar",
+      "memberId": "fake-cls-1em-20",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-19T22:34:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-21-sit-curiosidade",
+      "memberId": "fake-cls-1em-21",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-26T11:31:10.778Z"
+    },
+    {
+      "id": "r-fake-cls-1em-21-sit-parar",
+      "memberId": "fake-cls-1em-21",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-18T22:03:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-1em-22-sit-pressao",
+      "memberId": "fake-cls-1em-22",
+      "classId": "cls-1em",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-20T14:16:44.112Z"
+    },
+    {
+      "id": "r-fake-cls-1em-22-sit-parar",
+      "memberId": "fake-cls-1em-22",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-10T18:38:13.001Z"
+    },
+    {
+      "id": "r-fake-cls-1em-23-sit-curiosidade",
+      "memberId": "fake-cls-1em-23",
+      "classId": "cls-1em",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T05:30:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-1em-23-sit-parar",
+      "memberId": "fake-cls-1em-23",
+      "classId": "cls-1em",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-08T22:30:15.223Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-0-sit-pressao",
+      "memberId": "fake-cls-pequena-0",
+      "classId": "cls-pequena",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-09T13:09:41.890Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-0-sit-curiosidade",
+      "memberId": "fake-cls-pequena-0",
+      "classId": "cls-pequena",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-08T13:29:08.556Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-0-sit-parar",
+      "memberId": "fake-cls-pequena-0",
+      "classId": "cls-pequena",
+      "situationId": "sit-parar",
+      "choiceId": "c-s1",
+      "trail": "apoio",
+      "createdAt": "2026-10-23T11:28:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-1-sit-curiosidade",
+      "memberId": "fake-cls-pequena-1",
+      "classId": "cls-pequena",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c2",
+      "trail": "prevencao",
+      "createdAt": "2026-10-06T11:58:57.445Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-2-sit-curiosidade",
+      "memberId": "fake-cls-pequena-2",
+      "classId": "cls-pequena",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-08T15:26:55.223Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-2-sit-parar",
+      "memberId": "fake-cls-pequena-2",
+      "classId": "cls-pequena",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-22T04:06:21.890Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-3-sit-pressao",
+      "memberId": "fake-cls-pequena-3",
+      "classId": "cls-pequena",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-19T02:25:48.556Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-3-sit-parar",
+      "memberId": "fake-cls-pequena-3",
+      "classId": "cls-pequena",
+      "situationId": "sit-parar",
+      "choiceId": "c-s2",
+      "trail": "apoio",
+      "createdAt": "2026-10-25T08:42:50.778Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-4-sit-pressao",
+      "memberId": "fake-cls-pequena-4",
+      "classId": "cls-pequena",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p3",
+      "trail": "prevencao",
+      "createdAt": "2026-10-13T20:15:37.445Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-5-sit-pressao",
+      "memberId": "fake-cls-pequena-5",
+      "classId": "cls-pequena",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-10T20:23:35.223Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-5-sit-curiosidade",
+      "memberId": "fake-cls-pequena-5",
+      "classId": "cls-pequena",
+      "situationId": "sit-curiosidade",
+      "choiceId": "c-c1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-07T07:03:01.890Z"
+    },
+    {
+      "id": "r-fake-cls-pequena-5-sit-parar",
+      "memberId": "fake-cls-pequena-5",
+      "classId": "cls-pequena",
+      "situationId": "sit-parar",
+      "choiceId": "c-s3",
+      "trail": "apoio",
+      "createdAt": "2026-10-02T03:22:28.556Z"
+    },
+    {
+      "id": "r-8icy4v4b",
+      "memberId": "m-aluno",
+      "classId": "cls-8a",
+      "situationId": "sit-pressao",
+      "choiceId": "c-p1",
+      "trail": "prevencao",
+      "createdAt": "2026-10-27T13:22:44.011Z"
+    }
+  ],
+  "leads": []
+}
